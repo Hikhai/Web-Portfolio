@@ -1,0 +1,158 @@
+@use 'colors';
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: colors.$deepBlack;
+    min-height: 100vh;
+
+    .content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 60%;
+
+
+        p {
+            overflow: hidden;
+        }
+
+        h3 {
+            overflow: hidden;
+        }
+
+        h2 {
+            overflow: hidden;
+            margin-bottom: 20px;
+            margin: 0;
+        }
+
+        form {
+            justify-content: center;
+            flex: 10;
+            background-color: colors.$innerFormColor;
+            border-radius: 2ch;
+            border: solid 25px colors.$formColor;
+            padding: 30px;
+            line-height: 1.5;
+
+        }
+
+        .headercontent {
+            display: flex;
+            flex-direction: column;
+            flex: 10;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footercontent {
+            display: flex;
+            flex-direction: column;
+            flex: 7;
+            justify-content: center;
+            align-items: center;
+
+            form {
+                text-align: center;
+                width: 70%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1098px) {
+        .content {
+            width: 70%;
+        }
+    }
+
+
+
+    @media screen and (max-width: 960px) {
+        .content {
+
+            p {
+                font-size: 12px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            form {
+                padding: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .content {
+            width: 80%;
+
+            form {
+                padding: 15px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .content {
+
+            form {
+                border: solid 20px colors.$formColor;
+
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .content {
+            p {
+                font-size: 9px;
+            }
+
+            h3 {
+                font-size: 11px;
+            }
+
+            h2 {
+                font-size: 15px;
+            }
+
+            form {
+                padding: 8px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 384px) {
+        .content {
+            width: 80%;
+
+            p {
+                font-size: 7px;
+            }
+
+            h3 {
+                font-size: 9px;
+            }
+
+            h2 {
+                font-size: 13px;
+            }
+
+            form {
+                border: solid 14px colors.$formColor;
+            }
+        }
+    }
+}

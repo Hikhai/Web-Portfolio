@@ -1,0 +1,146 @@
+@use 'colors';
+
+.navbar {
+    background-color: colors.$darkGrey;
+    padding: 0 100px;
+
+    .container {
+        padding: 15px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .links,
+        .logo,
+        .userprofile {
+            flex: 1;
+        }
+
+        button {
+            width: max-content;
+            align-self: flex-end;
+            width: 80px;
+            padding: 5px;
+            border: none;
+            background: none;
+        }
+
+        .links {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h1:hover {
+                color: colors.$aHover;
+                cursor: pointer;
+                color: colors.$aHoverWhite;
+            }
+
+            a {
+                text-decoration: none;
+                color: colors.$aColor;
+            }
+        }
+
+        .logo {
+            justify-content: center;
+            display: flex;
+
+
+            img {
+                width: 200px;
+            }
+
+        }
+
+        .userprofile {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            gap: 50px;
+
+            img {
+                height: 55px;
+                width: 55px;
+                border-radius: 50%;
+                border: 3px solid transparent;
+                border-color: colors.$aHover;
+                cursor: pointer;
+
+                &:hover {
+                    border-color: colors.$aHoverWhite;
+                }
+            }
+
+
+            span {
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            a {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.87)
+            }
+
+            .profile {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .authbutton {
+                gap: 15px;
+                flex-direction: row;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1098px) {
+        padding: 0 50px;
+    }
+
+    @media screen and (max-width: 960px) {
+        padding: 0 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0 25px;
+    }
+
+    @media screen and (max-width: 640px) {
+        .logo {
+            img {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 0 20px;
+
+        .container {
+            .userprofile {
+                gap: 0px;
+                flex-direction: column;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 384px) {
+        padding: 0 10px;
+    }
+}

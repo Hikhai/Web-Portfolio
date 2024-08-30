@@ -1,0 +1,49 @@
+@use 'colors';
+
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: colors.$bgColor;
+
+    button {
+        border-radius: 10px;
+        border: 2px solid transparent;
+        font-size: 1em;
+        font-weight: 500;
+        font-family: inherit;
+        background-color: colors.$btnColor;
+        cursor: pointer;
+        border-color: colors.$aColor;
+    }
+
+    button:hover {
+        background-color: colors.$aColor;
+    }
+
+
+    textarea {
+        font-family: Verdana, Geneva, Tahoma, sans-serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        width: 100%;
+        min-height: 250px;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: colors.$formColor;
+        color: colors.$aHoverWhite;
+        resize: vertical;
+        box-sizing: border-box;
+        font-size: 16px;
+        overflow: auto;
+        line-height: 1.5;
+    }
+
+    span {
+        font-size: 12px;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+}

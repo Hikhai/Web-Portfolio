@@ -1,0 +1,268 @@
+@use 'colors';
+
+.modal {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .backshadow {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .custom-modal {
+            background-color: colors.$formColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2ch;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            gap: 20px;
+
+            .user-dialog {
+                width: 550px;
+                height: 650px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                gap: 30px;
+
+                p {
+                    font-size: 14px;
+                    color: rgb(186, 49, 49);
+                }
+
+                .category-container {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 50px;
+
+                    .column {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+
+                        .custom-select {
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            align-items: center;
+
+                            a {
+                                font-size: 14px;
+                                text-decoration: underline;
+                                font-weight: 600;
+                                color: colors.$brightColor;
+                            }
+
+                            a:hover {
+                                color: rgba(255, 255, 255, 0.87);
+                                cursor: pointer;
+                            }
+
+                            button {
+                                font-size: 14px;
+                                padding: 4px;
+                                font-weight: 600;
+                                color: colors.$aHover;
+                                align-self: center;
+                            }
+
+                            button:hover {
+                                color: rgba(255, 255, 255, 0.87);
+                            }
+
+                            select {
+                                padding: 8px 16px;
+                                font-size: 15px;
+                                border-radius: 4px;
+                                border: 1px solid #636363;
+                                background-color: colors.$inputColor;
+                                cursor: pointer;
+                                outline: none;
+
+                                &:hover {
+                                    border-color: colors.$aHover
+                                }
+                            }
+                        }
+
+                        h4 {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    gap: 20px;
+                    align-items: center;
+                    text-align: center;
+                    margin-bottom: 40px;
+                }
+
+                input {
+                    font-size: 15px;
+                    padding: 12px;
+                    border: none;
+                    border-radius: 1ch;
+                    background-color: colors.$inputColor;
+                    width: 350px;
+                }
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+            }
+
+            .save-button {
+                font-size: 14px;
+                padding: 8px 12px;
+                font-weight: 600;
+                color: colors.$aHover;
+
+
+                &:hover {
+                    color: rgba(255, 255, 255, 0.87);
+                }
+            }
+
+            .image-container {
+                min-height: 550px;
+                min-width: 550px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                padding: 40px;
+                gap: 20px;
+
+                p {
+                    font-size: 14px;
+                    color: rgb(186, 49, 49);
+                }
+
+                img {
+                    height: 300px;
+                    border: 2px solid rgb(223, 223, 223);
+                }
+
+                .grey-box {
+                    min-height: 300px;
+                    min-width: 450px;
+                    background-color: rgb(48, 48, 48);
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    justify-content: center;
+                    border: 2px solid #424242;
+
+                    label {
+                        font-size: 18px;
+                        text-decoration: underline;
+                        font-weight: 800;
+                        color: colors.$aColor;
+                    }
+
+                    label:hover {
+                        color: rgba(255, 255, 255, 0.87);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .button-group {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 40px;
+                margin-bottom: 30px;
+
+                label {
+                    text-decoration: underline;
+                    font-weight: 800;
+                    color: colors.$aColor;
+                }
+
+                label:hover {
+                    color: rgba(255, 255, 255, 0.87);
+                    cursor: pointer;
+                }
+
+                a {
+                    text-decoration: underline;
+                    font-weight: 800;
+                    color: colors.$brightColor;
+                }
+
+                a:hover {
+                    color: rgba(255, 255, 255, 0.87);
+                    cursor: pointer;
+                }
+
+                button {
+                    font-size: 14px;
+                    padding: 4px;
+                    font-weight: 600;
+                    color: colors.$aHover;
+                    align-self: center;
+                }
+
+                button:hover {
+                    color: rgba(255, 255, 255, 0.87);
+                }
+
+                .invisible {
+                    visibility: hidden;
+                }
+            }
+
+            .intro-dialog {
+                width: 550px;
+                height: 550px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 40px;
+                gap: 30px;
+
+            }
+
+            .close-button {
+                display: flex;
+                justify-content: flex-start;
+                bottom: 20px;
+                right: 20px;
+                position: absolute;
+
+                button {
+                    font-size: 15px;
+
+                }
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,19 @@
+@use 'colors';
+@use 'auth';
+@use 'home';
+@use 'navbar';
+@use 'about';
+@use 'singlepage';
+@use 'footer';
+@use 'modal';
+
+.app {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
